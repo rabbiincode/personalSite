@@ -1,0 +1,42 @@
+@use'./src/_custom.scss' as *;
+
+.button {
+  color: black;
+  background: $c2;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 10px;
+  &:focus{
+    outline: none;
+   }
+  &:hover{
+    background: $primary;
+    color: $c2;
+    border: 0.1px outline wheat;
+  }
+}
+
+@mixin absoluteCenter{
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}
+
+@mixin transitionProperty($time) {
+ transition-duration: $time;
+ transition-property: all;
+}
+
+@keyframes border {
+ 0%{
+  transform: scale(1);
+  opacity: 1;
+ }
+ 100%{
+  transform: scale(1.5);
+  opacity: 0;
+ }
+}

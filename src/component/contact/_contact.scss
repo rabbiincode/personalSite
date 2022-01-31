@@ -1,0 +1,71 @@
+@use'./src/_custom.scss' as *;
+@use'./src/custom/_typography.scss' as *;
+@use'./src/custom/_universal.scss' as *;
+
+
+.contact{
+  background: $primary;
+
+  .bg{
+    background: $c4;
+  }
+  .bg-2{
+     background: $c5;
+  }
+
+ .cta-info{
+   padding: 3rem;
+   margin: 1rem 0;
+ 
+    &-list{
+     position: relative;
+     display: block;
+     padding-top: 0.5rem;
+     padding-left: 0.5rem;
+     margin-bottom: 2rem;
+ 
+     .link{
+       margin-bottom: 1rem;
+
+       img{
+         width: 3rem;
+         height: 3rem;
+         object-fit: cover;
+         border-radius: 50%;
+        }
+       .no{
+         font-size: 1.2rem;
+         font-weight: 300;
+         color: white;
+         margin-left: 1rem;
+      }
+     }
+ 
+    }
+  }
+
+ .form{
+   margin-top: 5rem;
+ }
+
+
+ @include media-breakpoint-down(sm){
+    .cta-info{
+      &-list{
+        .link{
+          img{
+            width: 2rem;
+            height: 2rem;
+          }
+          .no{
+            font-size: 0.5712rem;
+          }
+        }
+      }
+    }
+    .form{
+      margin-top: 0;
+    }
+ }
+  
+}

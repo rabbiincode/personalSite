@@ -1,0 +1,87 @@
+@use'./src/_custom.scss' as *;
+@use'./src/custom/_typography.scss' as *;
+@use'./src/custom/_universal.scss' as *;
+
+.home{
+ background: $primary;
+ color: white;
+ padding: 5rem 0 0 0;
+ width: 100%;
+ height: 100%;
+ text-align: center;
+ &-me{
+   margin-top: 4rem;
+ }
+
+ .but{
+   margin-right: 1rem;
+ }
+
+  img{
+   width: 400px;
+   height: 400px;
+   object-fit: cover;
+  }
+
+  .wrap{
+    height: 50px;
+    overflow: hidden;
+    font-size: 2rem;
+    font-weight: 300;
+    color: rebeccapurple;
+    display: flex;
+    align-items: center;
+  }
+
+  .item-wrap{
+    height: 100%;
+    animation: items 10s ease-in-out infinite alternate;
+  }
+
+  @keyframes items {
+    25% {
+      transform: translateY(-50px);
+    }
+    50% {
+      transform: translateY(-100px);
+    }
+    75% {
+      transform: translateY(-150px);
+    }
+    100% {
+      transform: translateY(-200px);
+    }
+    125% {
+      transform: translateY(-250px);
+    }
+  }
+}
+
+@include media-breakpoint-down(md){
+  .home{
+    padding: 1rem 0 0 0;
+    &-me{
+      margin-top: 2rem;
+    }  
+    img{
+      display: none;
+    }
+   }
+}
+ @include media-breakpoint-down(lg){
+    .home{
+      padding: 2rem 0 0 0;
+      &-me{
+        margin-top: 3rem;
+      }     
+    }
+  }
+
+  @include media-breakpoint-down(sm){
+    .home{
+      padding: 0;
+      &-me{
+        margin-top: 1rem;
+      }     
+    }
+  }

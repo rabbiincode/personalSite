@@ -1,0 +1,91 @@
+@use'./src/_custom.scss' as *;
+@use'./src/custom/_typography.scss' as *;
+@use'./src/custom/_universal.scss' as *;
+
+.header{
+  background: $primary;
+  color: white;
+  width: 100%;
+  height: 70px;
+  top: 0;
+  position: sticky;
+  z-index: 3;
+  transition: all 3s ease;
+
+  .nav{
+    padding: 10px 30px;
+    display: flex;   
+    align-items: center;
+    justify-content: space-between;
+    
+    .logo{
+     color: $c1;
+     font-size: 1.2rem;
+     font-weight: 500;
+     transition: all 1s ease-in;
+     
+     @include media-breakpoint-down(sm){
+       font-size: 1rem;
+     }
+     .me{
+       width: 2rem;
+       height: 2rem;
+       object-fit: cover;
+       border-radius: 50%;
+     }
+     &:hover{
+       color: wheat;
+     }
+    }
+
+    @include media-breakpoint-down(sm){
+      button{
+        display: none;
+      }
+    }
+    
+   
+    .hamburger{
+      width: 32px;
+      height: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+   
+      span{
+        width: 100%;
+        height: 2px;
+        background: white;
+        transform-origin: left;
+        transition: all 2s ease;
+      }
+    }
+   
+  }
+
+  &.active{
+    background: $side;
+    color: black;
+
+    .logo{
+      color: wheat;
+    }
+
+    .hamburger{
+       span{
+         &:first-child{
+           background: wheat;
+           transform: rotate(45deg);
+         }
+         &:nth-child(2){
+           opacity: 0;
+         }
+         &:last-child{
+           background: wheat;
+           transform: rotate(-45deg);
+         }
+       }
+    }
+  }
+}

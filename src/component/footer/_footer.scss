@@ -1,0 +1,73 @@
+@use'./src/_custom.scss' as *;
+@use'./src/custom/_typography.scss' as *;
+@use'./src/custom/_universal.scss' as *;
+
+.footer{
+ background: $primary;
+ padding-top: 3rem;
+ color: white;
+
+ .name{
+  color: $c3;
+  text-transform: lowercase;
+  font-size: 1rem;
+ }
+ .desc{
+  color: $c7;
+ }
+
+ .heading{
+  font-size: 1rem;
+  font-weight: 300;
+  color: $c7;
+  text-transform: underline;
+ }
+
+ .content{
+  font-style: italic;
+  font-size: 1rem;
+  color: $c6;
+  padding: 0.5rem;
+  cursor: pointer;
+  &:hover{
+   color: $c2;
+   transform: scaleY(1.5);
+   transition: all ease-in-out 1s;
+  }
+ }
+
+ &-copyright{
+  color: white;
+  font-weight: 500;
+
+  a{
+   color: $c1;
+   text-decoration: underline;
+
+   &:hover{
+    color: $c7;
+    text-decoration: line-through;
+   }
+  }
+ }
+
+ @include media-breakpoint-down(md){
+  padding-top: 1rem;
+  .name{
+   font-size: 0.8rem;
+  }
+  .list{
+    display: none;
+  }
+  .heading{
+   padding-top: 1rem;
+  }
+  .content{
+   font-style: 0.8rem;
+  }
+  .contact{
+   text-align: center;
+  }
+ }
+
+}

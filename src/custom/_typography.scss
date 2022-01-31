@@ -1,0 +1,145 @@
+@use'./src/_custom.scss' as *;
+
+.heading{
+  color: $primary;
+  font-size: 2rem;
+  font-style: italic;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: underline;
+  @include media-breakpoint-down(md){
+    font-size: 1.5rem;
+  }
+  @include media-breakpoint-down(sm){
+    font-size: 1.2rem;
+  }
+}
+
+.heading-2{
+  color: $c2;
+  font-size: 2rem;
+  font-style: italic;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: underline;
+  @include media-breakpoint-down(md){
+    font-size: 1.5rem;
+  }
+  @include media-breakpoint-down(sm){
+    font-size: 1.2rem;
+  }
+}
+
+.sub-heading{
+  color: $primary;
+  font-size: 1.5rem;
+  font-style: oblique;
+  display: inline-block;
+  font-weight: 400;
+  @include media-breakpoint-down(md){
+    font-size: 1.2rem;
+  }
+  @include media-breakpoint-down(sm){
+    font-size: 1rem;
+  }
+}
+
+.sub-heading-2{
+  color: $c2;
+  font-size: 1.5rem;
+  font-style: oblique;
+  display: inline-block;
+  font-weight: 400;
+  @include media-breakpoint-down(md){
+    font-size: 1.2rem;
+  }
+  @include media-breakpoint-down(sm){
+    font-size: 1rem;
+  }
+}
+
+.display-1{
+ margin-bottom: 1rem;
+ //line-height: 2rem;
+
+&--intro{
+ display: inline-block;
+ font-weight: 300;
+ font-size: 2.5rem;
+ font-family: 'Poppins', sans-serif;
+ @include media-breakpoint-down(sm){
+  font-size: 1.5rem;
+}
+}
+
+&--name{
+  color: $c1;
+  font-size: 2rem;
+  font-weight: 300;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+&--footer{
+  color: $c1;
+  font-size: 1rem;
+  font-weight: 200;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+&--meet{
+  font-size: 2rem;
+  font-weight: 300;
+  display: inline-block;
+  margin-left: 6rem;
+  padding-top: 0.5rem;
+}
+
+&--description{
+ font-size: 1.5rem;
+ display: block;
+ margin-top: 1.2rem;
+ font-family: 'Poppins', sans-serif;
+ text-transform: none;
+}
+
+}
+
+@include media-breakpoint-down(md){
+  .display-1{
+    &--intro, &--name{
+      font-size: 1.3rem;
+      font-weight: 200;
+    }
+    &--meet{
+      font-size: 1.3rem;
+      font-weight: 200;
+      display: block;
+      margin-left: 0;
+    }
+    &--description{
+      font-size: 1rem;
+    }
+    
+  }
+}
+
+@include media-breakpoint-down(sm){
+  .display-1{
+    &--intro, &--name{
+      font-size: 1.2rem;
+      font-weight: 200;
+    }
+    &--meet{
+      font-size: 1.1rem;
+      font-weight: 200;
+      display: inline-block;
+      margin-left: 0;
+    }
+    &--description{
+      font-size: 0.8rem;
+    }
+    
+  }
+} 

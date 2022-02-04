@@ -1,9 +1,12 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
+import AnimatedPage from '../page-animation/AnimatedPage'
 import './_home.scss'
 
 const Home = () => {
  return (
+  <AnimatedPage>
   <div className='home'>
    <Container>
      <Row>
@@ -15,7 +18,7 @@ const Home = () => {
               looking for a software developer...
               <div className='display-1--meet'>___meet <span className='display-1--name'>isaiah success</span></div>
               <div className='display-1--description'>
-                 a front -end web developer using front-end technologies to make
+                 a front-end web developer using front-end technologies to make
                  unique and responsive designs.
               </div>
             </div>
@@ -32,9 +35,12 @@ const Home = () => {
            </div>
          </div>
           
+          <Link to='/contact'>
            <button type="button" className="button but my-3">
              Hire me
            </button>
+          </Link>
+           
 
            <button type="button" className="button my-3">
              Download CV
@@ -44,13 +50,14 @@ const Home = () => {
       </Col>
       <Col md={4} className='text-end'>
          <div className='home-img mb-5'>
-          <img src={'/images/s3.png'} alt="image" className='img-fluid'/>
+          <img src={'/images/code.png'} alt="image" className='img-fluid'/>
          </div>
       </Col>
      </Row>
     
    </Container>
   </div>
+  </AnimatedPage>
  )
 }
 

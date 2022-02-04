@@ -16,6 +16,15 @@
  .cta-info{
    padding: 3rem;
    margin: 1rem 0;
+
+   .color{
+     color: wheat;
+     font-style: italic;
+   }
+
+   .underline{
+     text-decoration: underline;
+   }
  
     &-list{
      position: relative;
@@ -23,21 +32,25 @@
      padding-top: 0.5rem;
      padding-left: 0.5rem;
      margin-bottom: 2rem;
+
+     a{
+       text-decoration: none;
+     }
  
-     .link{
+     .social{
        margin-bottom: 1rem;
 
        img{
-         width: 3rem;
-         height: 3rem;
+         width: 2rem;
+         height: 2rem;
          object-fit: cover;
          border-radius: 50%;
         }
        .no{
-         font-size: 1.2rem;
+         font-size: 0.8rem;
          font-weight: 300;
          color: white;
-         margin-left: 1rem;
+         margin-left: 0.5rem;
       }
      }
  
@@ -46,6 +59,11 @@
 
  .form{
    margin-top: 5rem;
+   text-align: center;
+
+   span{
+     color: green;
+   }
  }
 
 
@@ -54,8 +72,8 @@
       &-list{
         .link{
           img{
-            width: 2rem;
-            height: 2rem;
+            width: 1.3rem;
+            height: 1.3rem;
           }
           .no{
             font-size: 0.5712rem;

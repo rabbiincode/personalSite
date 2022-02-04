@@ -31,12 +31,13 @@
      font-weight: 400;
      color: white;
      text-decoration: none;
+     text-transform: uppercase;
 
      &:hover{
       background: wheat;
-      color: black !important;
-      padding: 0.5rem;                                                                                                                                                                                                                                                                                                                                                                                                                    
-   
+      color: black;
+      padding: 0.5em;                                                                                                                                                                                                                                                                                                                                                                                                                    
+      border-radius: 10px;
     }
 
    }

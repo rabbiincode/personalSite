@@ -11,9 +11,10 @@
   position: sticky;
   z-index: 3;
   transition: all 3s ease;
+  align-items: center;
 
   .nav{
-    padding: 10px 30px;
+    padding: 0.6rem 1.8rem;
     display: flex;   
     align-items: center;
     justify-content: space-between;
@@ -24,9 +25,9 @@
      font-weight: 500;
      transition: all 1s ease-in;
      
-     @include media-breakpoint-down(sm){
-       font-size: 1rem;
-     }
+    //  @include media-breakpoint-down(sm){
+    //    font-size: 1rem;
+    //  }
      .me{
        width: 2rem;
        height: 2rem;
@@ -38,54 +39,79 @@
      }
     }
 
-    @include media-breakpoint-down(sm){
-      button{
-        display: none;
+    &-list{    
+      ul{
+        display: flex;
+        list-style: none;
+        align-items: center;
+        li{
+          color: #fff;
+          margin-right: 1.5rem;
+          text-transform: uppercase;
+          font-weight: 500;
+          &:hover{
+            background: $c2;
+            color: $primary;
+            padding: 0.5em;
+            border-radius: 10px;
+          }
+        }
       }
     }
     
-   
-    .hamburger{
-      width: 32px;
-      height: 25px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      cursor: pointer;
-   
-      span{
-        width: 100%;
-        height: 2px;
-        background: white;
-        transform-origin: left;
-        transition: all 2s ease;
+
+  }
+
+  @include media-breakpoint-down(md){
+    display: flex;
+    justify-content: space-between;
+
+    .nav-list{
+      display: none;
+    }
+      .hamburger{
+        width: 2rem;
+        height: 1.5rem;
+        margin: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+       
+        span{
+          width: 100%;
+          height: 2px;
+          background: white;
+          transform-origin: left;
+          transition: all 2s ease;
+        }
       }
     }
+
+    &.active{
+      background: $side;
+      color: black;
+  
+      .logo{
+        color: wheat;
+      }
+  
+      .hamburger{
+         span{
+           &:first-child{
+             background: wheat;
+             transform: rotate(45deg);
+           }
+           &:nth-child(2){
+             opacity: 0;
+           }
+           &:last-child{
+             background: wheat;
+             transform: rotate(-45deg);
+           }
+         }
+      }
    
-  }
+  } 
 
-  &.active{
-    background: $side;
-    color: black;
-
-    .logo{
-      color: wheat;
-    }
-
-    .hamburger{
-       span{
-         &:first-child{
-           background: wheat;
-           transform: rotate(45deg);
-         }
-         &:nth-child(2){
-           opacity: 0;
-         }
-         &:last-child{
-           background: wheat;
-           transform: rotate(-45deg);
-         }
-       }
-    }
-  }
 }

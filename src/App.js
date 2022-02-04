@@ -10,24 +10,30 @@ import Portfolio from './component/All-Portfolio/portfolio/Portfolio'
 import Contact from './component/contact/Contact'
 import Footer from './component/footer/Footer'
 import Sidebar from './component/sidebar/Sidebar'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
 
 const App = () => {
 
   const [open, setOpen] = useState(false)
+
+  const location = useLocation()
 
  return (
    <div className='app'>
      <Navbar open={open} setOpen={setOpen}/>
      <Sidebar open={open} setOpen={setOpen}/>
      <div className='app-components'>
-       <Routes>
-         <Route path='/' element={<Home/>}/>
-         <Route path='/about' element={<About/>}/>
+      <AnimatePresence exitBeforeEnter>
+       <Routes key={location.pathname} location={location}>
+         <Route path='/' element={[<Home/>, <About/>, <Services/>, <Portfolio/>, <Contact/>]}/>
          <Route path='/services' element={<Services/>}/>
+         <Route path='/about' element={<About/>}/>
          <Route path='/portfolio' element={<Portfolio/>}/>
          <Route path='/contact' element={<Contact/>}/>
+         {/* <Route path="*" element={<NotFound />} /> */}
        </Routes>
+      </AnimatePresence>
        <Footer/>
      </div>
    </div>

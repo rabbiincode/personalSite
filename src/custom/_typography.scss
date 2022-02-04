@@ -65,7 +65,7 @@
 &--intro{
  display: inline-block;
  font-weight: 300;
- font-size: 2.5rem;
+ font-size: 2rem;
  font-family: 'Poppins', sans-serif;
  @include media-breakpoint-down(sm){
   font-size: 1.5rem;
@@ -76,6 +76,14 @@
   color: $c1;
   font-size: 2rem;
   font-weight: 300;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+&--name-2{
+  color: $c1;
+  font-size: 1.1rem;
+  font-weight: 400;
   display: inline-block;
   text-transform: uppercase;
 }
@@ -92,14 +100,14 @@
   font-size: 2rem;
   font-weight: 300;
   display: inline-block;
-  margin-left: 6rem;
+  margin-left: 2em;
   padding-top: 0.5rem;
 }
 
 &--description{
- font-size: 1.5rem;
+ font-size: 1.3rem;
  display: block;
- margin-top: 1.2rem;
+ margin-top: 1.2em;
  font-family: 'Poppins', sans-serif;
  text-transform: none;
 }

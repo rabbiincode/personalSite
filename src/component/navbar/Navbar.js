@@ -43,9 +43,11 @@ const Navbar = ( { open, setOpen }) => {
          <li className='name'>Contact</li>
        </Link>
 
-       <button type="button" class="rounded-pill btn-rounded button">
-         +234-80-6537-3835 <span><FontAwesomeIcon icon={faPhone} size="1x" color='wheat'/></span>
-       </button>
+       <a href="tel:+2348065373835">
+        <button type="button" className="rounded-pill btn-rounded button">
+          +234-80-6537-3835 <span><FontAwesomeIcon icon={faPhone} size="1x" color='wheat'/></span>
+        </button>
+       </a>
      </ul>
      </div>
 

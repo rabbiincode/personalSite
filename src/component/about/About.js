@@ -19,7 +19,7 @@ const About = () => {
   return(
    <AnimatedPage2>
     <div className='about'>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"><path fill="#000" fill-opacity="1" d="M0,32L80,32C160,32,320,32,480,48C640,64,800,96,960,90.7C1120,85,1280,43,1360,21.3L1440,0L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"><path fill="#000" fillOpacity="1" d="M0,32L80,32C160,32,320,32,480,48C640,64,800,96,960,90.7C1120,85,1280,43,1360,21.3L1440,0L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
 
       <Container>
         <Row>
@@ -67,7 +67,7 @@ const About = () => {
                   Failures comes, almost inevitably but that only makes you a better developer
                 </span>
                 <div className='diff'>
-                  "Curiosity didn't kill the cat, it made it wiser."
+                  "Curiosity didn't kill the cat, it made it wiser"
                 </div>
                 </ShowMoreText>
               </div>
@@ -137,7 +137,7 @@ const About = () => {
                   Failures comes, almost inevitably but that only makes you a better developer
                 </span>
                 <div className='diff'>
-                  "Curiosity didn't kill the cat, it made it wiser."
+                  "Curiosity didn't kill the cat, it made it wiser"
                 </div>
                </ShowMoreText>
               </div>

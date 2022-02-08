@@ -1,9 +1,8 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronCircleUp } from '@fortawesome/free-solid-svg-icons'
 import './_footer.scss'
 import Scroll from '../../Scroll'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
  return (
@@ -19,23 +18,23 @@ const Footer = () => {
 
      <Col md={3} lg={3}>
        <div className="list">
-         <div className='heading'>EXPERTISE</div>
-         <div className='content'>Html5</div>
-         <div className='content'>CSS5</div>
-         <div className='content'>JavaScript</div>
-         <div className='content'>ReactJs</div>
-         <div className='content'>Redux</div>   
+         <li className='heading'>EXPERTISE</li>
+         <li className='content'>Html5</li>
+         <li className='content'>CSS5</li>
+         <li className='content'>JavaScript</li>
+         <li className='content'>ReactJs</li>
+         <li className='content'>Redux</li>   
        </div>
      </Col>
 
      <Col md={3} lg={3}>
        <div className="list">
-         <div className='heading'>EXPERTISE</div>
-         <div className='content'>Firebase</div>
-         <div className='content'>BootStrap</div>
-         <div className='content'>Material Ui</div>
-         <div className='content'>..other Libraries</div>
-         <div className='content'>...still learning</div>
+         <li className='heading'>EXPERTISE</li>
+         <li className='content'>Firebase</li>
+         <li className='content'>BootStrap</li>
+         <li className='content'>Material Ui</li>
+         <li className='content'>..other Libraries</li>
+         <li className='content'>...still learning</li>
        </div>
      </Col>
 
@@ -43,11 +42,27 @@ const Footer = () => {
      <Col md={3} lg={3}>
        <div className="contact">
          <div className='heading'>CONTACT</div>
-         <div className='content'>+234-80-8953-1612</div>
-         <div className='content'>rabbiincode@gmail.com</div>
-         <div className='content'>Whatsapp</div>
-         <div className='content'>LInkedIn</div>
-         <div className='content'>GitHub</div>
+
+         <a href="tel:+2348065373835">
+          <li className='media'>+234-80-6537-3835</li>
+         </a>
+         
+         <Link to='/contact'>
+          <li className='media'>rabbiincode@gmail.com</li>
+         </Link>
+
+         <a target="_blank" href="https://api.whatsapp.com/send?phone=2348065373835">
+          <li className='media'>Whatsapp</li>
+         </a>
+
+         <a target="_blank" href="https://linkedin">
+          <li className='media'>LInkedIn</li>
+         </a>
+
+         <a target="_blank" href='https://github.com/rabbiincode'>
+          <li className='media'>GitHub</li>
+         </a>
+          
        </div>
      </Col>
 
@@ -55,7 +70,7 @@ const Footer = () => {
        <Scroll/>
      </div>
 
-     <div class="footer-copyright text-center py-5">
+     <div className="footer-copyright text-center py-5">
         copyright &copy; 2022 <a href="#">Success</a>
      </div>
 

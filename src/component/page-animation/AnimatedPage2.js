@@ -9,6 +9,7 @@ const animations = {
 const AnimatedPage2 = ({ children }) => {
   return (
     <motion.div 
+      key={2}
       variants={animations}
       initial='initial'
       animate='animate'

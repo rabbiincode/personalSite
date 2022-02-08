@@ -8,7 +8,8 @@ const animations = {
 
 const AnimatedPage4 = ({ children }) => {
   return (
-    <motion.div 
+    <motion.div
+       key={4} 
        variants={animations}
        initial='initial'
        animate='animate'

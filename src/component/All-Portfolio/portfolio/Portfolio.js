@@ -54,7 +54,7 @@ const Portfolio = () => {
  return (
   <AnimatedPage3>
    <div className='portfolio'>
-   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"><path fill="#000" fill-opacity="1" d="M0,32L80,42.7C160,53,320,75,480,74.7C640,75,800,53,960,58.7C1120,64,1280,96,1360,112L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"><path fill="#000" fillOpacity="1" d="M0,32L80,42.7C160,53,320,75,480,74.7C640,75,800,53,960,58.7C1120,64,1280,96,1360,112L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
     <Container>
      <Row>
        <div className="heading text-center">Portfolio</div>
@@ -62,7 +62,8 @@ const Portfolio = () => {
 
        <div className="portfolio-headings">
           {items.map(item => (
-            <PortfolioList 
+            <PortfolioList
+              key={item.id} 
               title={item.title}
               active={selected === item.id}
               setSelected={setSelected}
@@ -74,7 +75,7 @@ const Portfolio = () => {
 
       
        {data.map((d) => (
-         <Col md={6} lg={4}>
+         <Col md={6} lg={4} key={d.id}>
            <div className="portfolio-box-shadow mb-5">
              <img src={d.img} alt="image" title="portfolio 1" className='img-fluid'/>
              <div className="portfolio-info">

@@ -47,10 +47,15 @@
          border-radius: 50%;
         }
        .no{
-         font-size: 0.8rem;
-         font-weight: 300;
+         font-size: 1rem;
+         font-weight: 400;
          color: white;
          margin-left: 0.5rem;
+         transition: all ease-in-out 1s;
+         &:hover{
+           color: wheat;
+           transform: scaleY(1.5);
+         }
       }
      }
  
@@ -66,6 +71,12 @@
    }
  }
 
+ @include media-breakpoint-down(md){
+  .form{
+    margin-top: 0;
+  }
+ }
+ 
 
  @include media-breakpoint-down(sm){
     .cta-info{
@@ -80,9 +91,6 @@
           }
         }
       }
-    }
-    .form{
-      margin-top: 0;
     }
  }
   

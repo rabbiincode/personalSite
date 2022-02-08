@@ -16,6 +16,10 @@
   color: $c7;
  }
 
+ li{
+   list-style: none;
+ }
+
  .heading{
   font-size: 1rem;
   font-weight: 300;
@@ -28,9 +32,20 @@
   font-size: 1rem;
   color: $c6;
   padding: 0.5rem;
-  cursor: pointer;
   &:hover{
    color: $c2;
+   transform: scaleY(1.5);
+   transition: all ease-in-out 1s;
+  }
+ }
+
+  .media{
+  font-style: italic;
+  font-size: 1rem;
+  color: wheat;
+  padding: 0.5rem;
+  &:hover{
+   color: $c6;
    transform: scaleY(1.5);
    transition: all ease-in-out 1s;
   }

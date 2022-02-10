@@ -48,11 +48,21 @@
  @include media-breakpoint-down(md){
    margin-top: 0;
  }
+ 
 }
 
 .service-pics{
  height: 100%;
  animation: services 30s ease-in-out infinite alternate-reverse;
+
+ @include media-breakpoint-down(lg){
+  animation: large 30s ease-in-out infinite alternate-reverse;
+}
+
+@include media-breakpoint-down(md){
+  animation: services 30s ease-in-out infinite alternate-reverse;
+}
+
 }
 
 
@@ -89,3 +99,36 @@
   transform: translateY(-1350px);
  }
 }
+
+@keyframes large {
+  10% {
+    transform: translateY(-125px);
+  }
+  20% {
+    transform: translateY(-250px);
+  }
+  30% {
+    transform: translateY(-375px);
+  }
+  40% {
+    transform: translateY(-500px);
+  }
+  50% {
+    transform: translateY(-625px);
+  }
+  60% {
+   transform: translateY(-750px);
+  }
+  70% {
+   transform: translateY(-900px);
+  }
+  80% {
+   transform: translateY(-1025px);
+  }
+  90% {
+   transform: translateY(-1110px);
+  }
+  100% {
+   transform: translateY(-1150px);
+  }
+ }

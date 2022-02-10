@@ -79,7 +79,7 @@ const About = () => {
           <Col md={5} sm={12}>
            {
             !show ?
-            <div className="img text-end my-5">
+            <div className="img my-5">
               <img 
                 src={'/images/me.jpg'} 
                 alt="image" 

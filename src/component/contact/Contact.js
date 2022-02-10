@@ -17,8 +17,8 @@ const Contact = () => {
     e.preventDefault()
 
     emailjs.sendForm(
-       'email', 
-       'template', 
+       'gmail', 
+       'template_a3f1pll', 
         e.target, 
        'user_X8hfPy8HUVCNXTUsT2nYV'
        )
@@ -101,10 +101,13 @@ const Contact = () => {
                   <input type="name" placeholder="Your Name" id="name" name='name' className="form-control shadow form-control-lg"/>
                 </div>
                 <div className="mb-3 col-lg-12">
-                  <input type="email" placeholder="Email address" id="inputemail" name='user-email' className="form-control shadow form-control-lg"/>
+                  <input type="email" placeholder="Email address" id="inputemail" name='email' className="form-control shadow form-control-lg"/>
                 </div>
                 <div className="mb-3 col-lg-12">
-                  <textarea name="message" id="message" placeholder="Message"  name='user-email' className="form-control shadow form-control-lg" cols="30" rows="10"></textarea>
+                  <input type="subject" placeholder="Subject" id="subject" name='subject' className="form-control shadow form-control-lg"/>
+                </div>
+                <div className="mb-3 col-lg-12">
+                  <textarea name="message" id="message" placeholder="Message"  name='message' className="form-control shadow form-control-lg" cols="30" rows="10"></textarea>
                 </div>
  
                 <div className="text-center">
@@ -112,7 +115,7 @@ const Contact = () => {
                      Send <span><FontAwesomeIcon icon={faPaperPlane} size="1x"/></span>
                   </button>
                 </div>
-                {message && <span>Message sent successfully : )</span>}
+                {message && <span>Message sent successfully ✔️</span>}
               </form>
 
             </div>

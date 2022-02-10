@@ -23,7 +23,7 @@ const Navbar = ( { open, setOpen }) => {
      </div>
      <div className="nav-list">
      <ul>
-       <Link to='/' style={{ textDecoration: 'none' }}>
+       <Link to='/home' style={{ textDecoration: 'none' }}>
          <li className='name'>Home</li>
        </Link>
    
@@ -53,11 +53,18 @@ const Navbar = ( { open, setOpen }) => {
 
    </div>
 
-   <div className="hamburger" onClick={handleClick}>
-     <span className="line1"></span>
-     <span className="line2"></span>
-     <span className="line3"></span>
-   </div>
+     <div className="ham-btn">
+       <a href="tel:+2348065373835">
+         <button type="button" className="rounded-pill btn-rounded button">
+           +234-80-6537-3835 <span><FontAwesomeIcon icon={faPhone} size="1x" color='wheat'/></span>
+         </button>
+        </a>
+     </div>
+     <div className="hamburger" onClick={handleClick}>
+      <span className="line1"></span>
+      <span className="line2"></span>
+      <span className="line3"></span>
+     </div>
 
   </div>
  )

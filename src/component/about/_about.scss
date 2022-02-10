@@ -10,7 +10,7 @@
     color: black;
     font-weight: 400;
     display: inline-block;
-    margin-top: 7em;
+    margin-top: 5em;
   }
   &-desc{
     font-size: 1.1rem;
@@ -55,6 +55,7 @@
 
   .img{
     position: relative;
+    text-align: center;
     @include transitionProperty(3000ms);
    
   .me{

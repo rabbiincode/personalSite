@@ -1,7 +1,16 @@
 @use'./src/_custom.scss' as *;
 
-html{
+html, body{
+  min-height: 100%;
   font-size: clamp(10px, 16px, 20px);
+
+  @include media-breakpoint-down(md){
+    font-size: clamp(8px, 14.5px, 18px);
+  }
+
+  @include media-breakpoint-down(sm){
+    font-size: clamp(7px, 13px, 15px);
+  }
 }
 .app{
  padding: 0;

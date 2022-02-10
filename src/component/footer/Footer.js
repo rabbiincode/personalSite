@@ -71,7 +71,7 @@ const Footer = () => {
      </div>
 
      <div className="footer-copyright text-center py-5">
-        copyright &copy; 2022 <a href="#">Success</a>
+        copyright &copy; 2022 <Link to='/'>Success</Link>
      </div>
 
     </Row>

@@ -12,23 +12,23 @@ const Sidebar = ({ open, setOpen }) => {
   <div className={'menu ' + (open && 'active')}>
    <div className='sidebar' onClick={handleClick}>
     <hr/>
-    <Link to='/' style={{ textDecoration: 'none' }}>
+    <Link to='/home'>
       <div className='name'>Home</div>
     </Link>
     <hr/>
-    <Link to='/about' style={{ textDecoration: 'none' }}>
+    <Link to='/about'>
       <div className='name'>About</div>
     </Link>
     <hr/>
-    <Link to='/services' style={{ textDecoration: 'none' }}>
+    <Link to='/services'>
       <div className='name'>Services</div>
     </Link>
     <hr/>
-    <Link to='/portfolio' style={{ textDecoration: 'none' }}>
+    <Link to='/portfolio'>
       <div className='name'>Portfolio</div>
     </Link>
     <hr/>
-    <Link to='/contact' style={{ textDecoration: 'none' }}>
+    <Link to='/contact'>
       <div className='name'>Contact</div>
     </Link>
     <hr/>
